@@ -1,0 +1,145 @@
+
+.clock_face 
+{
+	margin: 200px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	border-radius: 50%;
+	border: 5px solid #393939;
+	width: 400px;
+	height: 400px;
+	background: radial-gradient(farthest-side ellipse at top left, white, #aaaaaa)
+}
+/*===================center=====*/
+.center
+{
+	position: absolute;
+	top: 194px;
+	left: 195px;
+	height: 2%;
+	width: 2%;
+	border-radius: 50%;
+	background: black;
+	z-index: 1;
+}
+/*==============стрелки==========*/
+.hour_hand 
+{
+	position: absolute;
+	height: 35%;
+	left: 48.75%;
+	top: 15%;
+	transform-origin: 50% 100%;
+	width: 2%;
+	background: black;
+	z-index: 1;
+	animation: spin 43200s steps(60) infinite;
+}
+.minute_hand
+{
+	position: absolute;
+	height: 40%;
+	left: 49.2%;
+	top: 10%;
+	background: black;
+	transform-origin: 50% 100%;
+	width: 1%;
+	z-index: 1;
+	animation: spin 3600s steps(60) infinite;
+}
+.second_hand
+{
+	position: absolute;
+	height: 49%;
+	left: 49.5%;
+	top: 10%;
+	transform-origin: 50% 80%;
+	width: 0.5%;
+	z-index: 2;
+	background: black;
+	animation: spin 60s steps(60) infinite;
+}
+/*===========цифры===========*/
+* p 
+{
+	margin: 0;
+}
+.numeral
+{
+	display: block;
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	font-weight: 600;
+	font-family: cursive;
+	font-size: 40px;
+	color: #393939;
+	line-height: 60px;
+}
+.numeral2
+{
+	transform: rotate(-30deg);
+}
+.numeral3
+{
+	transform: rotate(-60deg);
+}
+.numeral4
+{
+	transform: rotate(-90deg);
+}
+.numeral5
+{
+	transform: rotate(-120deg);
+}
+.numeral6
+{
+	transform: rotate(-150deg);
+}
+.row
+{
+	position: absolute;
+	height: 400px;
+	width: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;	
+}
+.row1
+{
+	transform: rotate(0deg);
+}
+.row2
+{
+	transform: rotate(30deg);
+}
+.row3
+{
+	transform: rotate(60deg);
+}
+.row4
+{
+	transform: rotate(90deg);
+}
+.row5
+{
+	transform: rotate(120deg);
+}
+.row6
+{
+	transform: rotate(150deg);
+}
+/*===================*/
+@keyframes spin 
+{
+	from 
+	{ 
+		transform: rotate(0deg); 
+	}
+	to 
+	{ 
+		transform: rotate(360deg); 
+	}
+}
